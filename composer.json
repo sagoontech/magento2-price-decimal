@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "sagoontech/base": "*",
+        "sagoontech/base": "1.0.0",
         "magento/framework": "~101.0|~102.0|~103.0",
         "magento/module-quote": "~101.1",
         "magento/module-directory": "~100.3",
