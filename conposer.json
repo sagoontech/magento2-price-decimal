@@ -1,5 +1,5 @@
 {
-    "name": "SagoonTech/magento2-price-decimal",
+    "name": "sagoontech/magento2-price-decimal",
     "description": "Magento 2 Price Decimal, hide `.00` but show `.10`. So that $8.00 becomes $8 and $8.90 becomes $8.90",
     "homepage": "https://www.sagoontech.com",
     "license": "MIT",
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "SagoonTech/base": "*",
+        "sagoontech/base": "*",
         "magento/framework": "~101.0|~102.0|~103.0",
         "magento/module-quote": "~101.1",
         "magento/module-directory": "~100.3",
