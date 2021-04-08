@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="SagoonTech_PriceDecimal::sagoon" title="Price Decimal" translate="title" module="SagoonTech_PriceDecimal" parent="DigitalCinema_Base::base" sortOrder="10" resource="SagoonTech_Base::base"/>
-        <add id="SagoonTech_PriceDecimal::sagoontech_pricedecimal" title="Price Decimal Settings" translate="title" module="SagoonTech_PriceDecimal" sortOrder="10" parent="SagoonTech_PriceDecimal::base" action="adminhtml/system_config/edit/section/sagoontech_pricedecimal" dependsOnModule="SagoonTech_PriceDecimal" resource="SagoonTech_PriceDecimal::sagoontech_pricedecimal" />
+        <add id="SagoonTech_PriceDecimal::index" title="Price Decimal" translate="title" module="SagoonTech_PriceDecimal" sortOrder="10" parent="SagoonTech_Base::base" dependsOnModule="SagoonTech_PriceDecimal" resource="SagoonTech_Base::base" />
+        <add id="SagoonTech_PriceDecimal::price_decimal" title="Price Decimal System" translate="title" module="SagoonTech_PriceDecimal" parent="SagoonTech_Base::base" sortOrder="10" resource="SagoonTech_PriceDecimal::config"/>
+        <add id="SagoonTech_PriceDecimal::pricedecmial_config" title="Price Decimal Config" translate="title" module="SagoonTech_PriceDecimal" sortOrder="10" parent="SagoonTech_PriceDecimal::price_decimal" action="adminhtml/system_config/edit/section/sagoontech_pricedecimal" dependsOnModule="SagoonTech_PriceDecimal" resource="SagoonTech_PriceDecimal::config" />
     </menu>
 </config>
