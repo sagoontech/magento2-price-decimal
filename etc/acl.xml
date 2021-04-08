@@ -6,7 +6,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="SagoonTech_PriceDecmial::sagoontech_pricedecimal" title="Sagoon Tech Decimal Precision Config" sortOrder="10"/>
+                            <resource id="SagoonTech_PriceDecimal::config" title="Sagoon Tech Decimal Precision Config" sortOrder="10"/>
                         </resource>
                     </resource>
                 </resource>
