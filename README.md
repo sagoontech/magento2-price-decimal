@@ -46,14 +46,18 @@ Step-by-step to install the Magento 2 extension through Composer:
 
 5. After that run the Magento upgrade
  
-   <code>php bin/magento setup:upgrade</code>
+   <code>bin/magento setup:upgrade</code>
 
    If Magento is running in production mode you may also need to redeploy the static content:
 
-   <code>php bin/magento setup:static-content:deploy</code>
+   <code>bin/magento setup:static-content:deploy</code>
+   
+6. Now, run compilation (only if your instance is in production):
 
-6. Clear the cache
+   <code>bin/magento setup:di:compile</code>
 
-   <code>php bin/magento cache:flush</code>
+7. Clear the cache
 
-7. After the installation: Go to your Magento admin portal and from Menu find "Sagoon Tech > Price Decimal System > Price Decimal Config" and enable it.
+   <code>bin/magento cache:flush</code>
+
+8. After the installation: Go to your Magento admin portal and from Menu find "Sagoon Tech > Price Decimal System > Price Decimal Config" and enable it.
