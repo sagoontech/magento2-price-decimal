@@ -26,4 +26,24 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 	{
 		return $this->scopeConfig->getValue(self::MODULE_ENABLED, ScopeInterface::SCOPE_STORE, $store);
 	}
+
+	/**
+	 * Check if there are any decimal value in the price.
+	 * @param $price
+	 * 
+	 * @return bool
+	 */
+	public function isNoPrecision($price):bool
+	{
+		if ($this->isModuleEnabled() && $price > 0) {
+            $priceNumber = floor($price);
+            $fraction = $price - $priceNumber;
+            if ($fraction > 0 && $fraction < 1) {
+                //do nothing, we use default
+            } else {
+                return true;
+            }
+        }
+		return false;
+	}
 }

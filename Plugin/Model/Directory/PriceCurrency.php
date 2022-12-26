@@ -38,15 +38,9 @@ class PriceCurrency
         $scope = null,
         $currency = null
     ) {
-        if($this->moduleHelper->isModuleEnabled()) {
-            $priceNumber = floor($amount);
-            $fraction = $amount - $priceNumber;
-            if ($fraction > 0 && $fraction < 1) {
-                //do nothing, we use default
-            } else {
-                $precision = 0;
-            }
-        }
+        if ($this->moduleHelper->isNoPrecision($amount)){
+            $precision = 0;
+		}
 
         return $subject->getCurrency($scope, $currency)
             ->formatPrecision($amount, $precision, [], $includeContainer);
