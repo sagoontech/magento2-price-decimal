@@ -48,14 +48,8 @@ class Renderer
 		$price
 	){
 		$precision = PriceCurrencyInterface::DEFAULT_PRECISION;
-		if($this->moduleHelper->isModuleEnabled()){
-			$priceNumber = floor($price);
-			$fraction = $price - $priceNumber;
-			if($fraction > 0 && $fraction < 1){
-				//do nothing, we use default
-			} else{
-				$precision = 0;
-			}
+		if($this->moduleHelper->isNoPrecision($price)){
+			$precision = 0;
 		}
 		
         $item = $subject->getItem();
